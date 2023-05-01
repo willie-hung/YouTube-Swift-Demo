@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PokemonSolidNormal-xyWR.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--LoadingViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="LoadingViewController" customClass="LoadingViewController" customModule="ProgressBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPa-U6-AVS">
+                                <rect key="frame" x="161.66666666666666" y="214" width="70" height="21"/>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFi-T3-Vo2">
+                                <rect key="frame" x="86.666666666666686" y="362" width="220" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="wjy-1B-zd7"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-Oh-Cus">
+                                <rect key="frame" x="121" y="681" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kFi-T3-Vo2" firstAttribute="top" secondItem="pPa-U6-AVS" secondAttribute="bottom" constant="100" id="Hyd-iw-j8g"/>
+                            <constraint firstItem="kFi-T3-Vo2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JpO-jQ-vA7"/>
+                            <constraint firstItem="pPa-U6-AVS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UvX-W1-gbr"/>
+                            <constraint firstItem="kFi-T3-Vo2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUC-hN-Tt9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="AI8-Oh-Cus" id="ld4-UK-v9l"/>
+                        <outlet property="progressBarImage" destination="kFi-T3-Vo2" id="Ozt-pk-AKl"/>
+                        <outlet property="progressBarTitle" destination="pPa-U6-AVS" id="WSn-N2-HSe"/>
+                        <segue destination="0xK-Kt-XKM" kind="presentation" identifier="showMain" id="vOU-Es-5ap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+        <!--MainViewController-->
+        <scene sceneID="V2q-Bx-MJv">
+            <objects>
+                <viewController id="0xK-Kt-XKM" userLabel="MainViewController" customClass="MainViewController" customModule="ProgressBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="85G-aW-Dnp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjb-rt-ASj">
+                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RjW-8j-enM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qjb-rt-ASj" firstAttribute="centerX" secondItem="85G-aW-Dnp" secondAttribute="centerX" id="rwm-4l-bpk"/>
+                            <constraint firstItem="Qjb-rt-ASj" firstAttribute="centerY" secondItem="85G-aW-Dnp" secondAttribute="centerY" id="zsc-KJ-9tX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainText" destination="Qjb-rt-ASj" id="GgO-Jr-Uft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryD-cb-0eK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
